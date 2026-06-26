@@ -154,9 +154,18 @@ align-items: flex-start;
 	display: block;
 	margin-bottom: 15px;
 }
+.services-section {
+  display: flex;
+  align-items: flex-start;   /* top-align both columns */
+  position: relative;        /* anchor for the absolute bracket */
+}
+
 table {
   border-collapse: separate;
-  border-spacing: 200px 30px;
+  border-spacing: 110px 18px;
+  order: 1;                  /* left column: the services grid */
+  margin-left: 60px;
+  margin-top: 30px;
 }
 
 
@@ -167,11 +176,12 @@ td {
 
 
 .whyus{
-	
+
 	border: 0px solid #FFFFFF;
-	float: right;
-	width: 300px;
-	margin-right: 100px;
+	order: 3;                  /* right column: the Why-Us text */
+	width: 280px;
+	margin-left: 90px;         /* sit close to the service columns */
+	margin-right: 60px;
 	font-family: "Futura PT Medium";
     font-weight: 200;
     font-size: 18px;
@@ -189,9 +199,17 @@ td {
 }
 
 .line1 {
-	border: 1px solid #FFFFFF;
-	width: 600px;
-	float: right;
+	/* Inverted-L bracket: top edge = horizontal arm, right edge =
+	   vertical divider, meeting at the top-right corner. */
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	height: 620px;       /* length of the vertical divider */
+	/* Span from just past the services box (left) to just left of the
+	   Why-Us column (right); the top-right corner forms the bend. */
+	position: absolute;
+	top: -20px;
+	left: 558px;         /* arm starts at the services box's right edge */
+	width: 292px;        /* vertical divider lands just left of Why-Us */
 }
 
 
