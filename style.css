@@ -65,7 +65,7 @@ body {
 	
 }
 .banner {
-  background: url("../images/gradient-banner.jpg");
+  background: url("images/gradient-banner.jpg");
   background-size: cover;
   height: 812px;
 }
